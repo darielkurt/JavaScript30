@@ -39,8 +39,15 @@
     // with Objects
     const person = {
       name: 'Wes Bos',
-      age: 80
+      age: 80,
+      one: {
+        two: 2
+      }
     };
+
+    const person2 = JSON.parse(JSON.stringify(person))
+    person2.one.two = 'not two'
+    console.log(person, person2)
 
     // and think we make a copy:
 
